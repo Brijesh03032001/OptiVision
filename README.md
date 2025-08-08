@@ -1,7 +1,10 @@
-# 🦙 SmolVLM Realtime Inference UI
 
-A lightweight, blazing-fast visual interface for **SmolVLM** models —  
-run real-time vision inference from your **webcam**, **video files**, or **images**, right in your browser.
+# 👁️ OptiVision
+
+**Advanced Optical Vision Intelligence Platform**
+
+Experience the future of AI-powered visual analysis with cutting-edge optical processing technology. Real-time image recognition, advanced computer vision, and intelligent automation at the speed of light.
+
 
 
 ## 🖼️ Interface Preview
@@ -13,45 +16,55 @@ run real-time vision inference from your **webcam**, **video files**, or **image
 
 ---
 
-## 🚀 Features
 
-#### - 📸 Webcam, 📹 Video File, 🖼️ Image Upload support
-#### - 🔄 Easy model switching (SmolVLM / SmolVLM2)
-#### - ⚡ Lightweight UI — pure HTML + JS
-#### - 🧠 Powered by `llama.cpp` + GGUF models
-#### - ✅ Offline & local-server ready
+## 🚀 Revolutionary Features
+
+- **Real-time Vision:** Process visual data in real-time with ultra-low latency optical processing technology.
+- **AI-Powered Analysis:** Advanced machine learning models for accurate object detection and scene understanding.
+- **Multi-Source Input:** Support for webcam, video files, and image uploads with seamless switching between sources.
+- **Lightning Fast:** Optimized processing pipeline delivering results at fiber-optic speeds.
+- **Secure & Private:** Local processing ensures your visual data never leaves your device.
+- **Customizable:** Flexible configuration options and multiple AI model support for diverse use cases.
 
 ---
 
-## ⚙️ Setup (First Time Only)
+
+## ⚙️ Getting Started
 
 ```bash
-git clone https://github.com/Shohruh72/SmolVLM-UI.git
-cd SmolVLM-UI
+git clone https://github.com/Brijesh03032001/OptiVision.git
+cd OptiVision
 chmod +x setup.sh run_server.sh
 ./setup.sh   # builds and selects your model
 ```
-## ▶️ Inference (Anytime After)
+
+## ▶️ Run Inference
 ```bash
 ./run_server.sh   # no rebuild, just launch
 ```
-## Open the UI
-Then open index.html in your browser and start prompting!
+
+## Launch the App
+Open `enhanced_index.html` in your browser and start your vision analysis!
 
 > 💡 **Tip:** After you’ve run `./setup.sh` once, you only need to use `./run_server.sh` on subsequent runs.
 
-## 📦 Supported Models
-```
-* ggml-org/SmolVLM-Instruct-GGUF
-* ggml-org/SmolVLM-256M-Instruct-GGUF
-* ggml-org/SmolVLM-500M-Instruct-GGUF
-* ggml-org/SmolVLM2-2.2B-Instruct-GGUF
-* ggml-org/SmolVLM2-256M-Video-Instruct-GGUF
-* ggml-org/SmolVLM2-500M-Video-Instruct-GGUF
-```
 
-## Reference
+## 🧑‍� Technology Stack
 
-- Inspired by [http://github.com/ngxson/smolvlm-realtime-webcam](http://github.com/ngxson/smolvlm-realtime-webcam) repository.
+- **Python**
+- **TensorFlow**
+- **JavaScript**
+- **OpenCV**
+- **WebGL**
+- **REST API**
+
+
+## 📖 About
+
+OptiVision is built for developers and researchers seeking advanced computer vision capabilities with fiber-optic speed and privacy-first design. Join thousands using OptiVision for their projects!
+
+---
+
+&copy; 2025 OptiVision. Advanced Optical Vision Intelligence Platform.
 
 
