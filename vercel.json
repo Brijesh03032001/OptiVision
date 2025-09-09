@@ -1,6 +1,13 @@
 {
   "buildCommand": null,
   "installCommand": null,
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/",
