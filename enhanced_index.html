@@ -6,6 +6,8 @@
   <title>OptiVision - Optimized Vision AI</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <!-- OptiVision Configuration -->
+  <script src="js/config.js"></script>
   <style>
     :root {
       --primary-gradient: linear-gradient(135deg, #00d4ff 0%, #0099cc 50%, #006699 100%);
@@ -507,7 +509,7 @@
           <i class="fas fa-server"></i>
           API Endpoint
         </label>
-        <input id="baseURL" value="http://localhost:8080" placeholder="API server URL">
+        <input id="baseURL" value="" placeholder="API server URL (auto-detected)">
       </div>
 
       <div class="form-group">
@@ -613,7 +615,7 @@
       const modelInfo = document.querySelector('.model-info');
       const selectedOption = modelSelect.options[modelSelect.selectedIndex];
       modelInfo.textContent = `Selected: ${selectedOption.text}`;
-      baseURL.value = `http://localhost:8080?model=${modelSelect.value}`;
+      baseURL.value = `${OptiVisionConfig.getApiUrl()}?model=${modelSelect.value}`;
     });
 
     // Handle source type changes
@@ -821,7 +823,17 @@
     });
 
     // Initialize webcam on load
-    window.addEventListener('DOMContentLoaded', () => {
+    window.addEventListener('DOMContentLoaded', async () => {
+      // Initialize API URL
+      baseURL.value = OptiVisionConfig.getApiUrl();
+      
+      // Check backend availability
+      const backendAvailable = await OptiVisionConfig.checkBackend();
+      if (!backendAvailable) {
+        console.warn('Backend not available, some features may not work');
+        // You could show a warning message to the user here
+      }
+      
       setTimeout(() => {
         initWebcam();
       }, 500);
