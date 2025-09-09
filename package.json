@@ -5,7 +5,6 @@
   "main": "landing.html",
   "scripts": {
     "dev": "python3 -m http.server 3000",
-    "build": "mkdir -p public && cp *.html public/ && cp -r js public/ && cp -r demo public/ && cp -r videos public/ || true",
     "start": "python3 -m http.server 3000"
   },
   "repository": {

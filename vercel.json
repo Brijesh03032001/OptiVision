@@ -1,8 +1,5 @@
 {
-  "buildCommand": "cp *.html public/ && cp -r js public/ && cp -r demo public/ && cp -r videos public/",
-  "outputDirectory": "public",
-  "installCommand": "echo 'No install needed'",
-  "framework": "other",
+  "functions": {},
   "rewrites": [
     {
       "source": "/",
