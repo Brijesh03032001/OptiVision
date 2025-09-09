@@ -2,12 +2,11 @@
   "name": "optivision",
   "version": "1.0.0",
   "description": "Advanced Optical Vision Intelligence Platform",
-  "main": "enhanced_index.html",
+  "main": "landing.html",
   "scripts": {
     "dev": "python3 -m http.server 3000",
-    "build": "echo 'Static site - no build needed'",
-    "start": "python3 -m http.server 3000",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "mkdir -p public && cp *.html public/ && cp -r js public/ && cp -r demo public/ && cp -r videos public/ || true",
+    "start": "python3 -m http.server 3000"
   },
   "repository": {
     "type": "git",
@@ -26,8 +25,5 @@
   "bugs": {
     "url": "https://github.com/Brijesh03032001/OptiVision/issues"
   },
-  "homepage": "https://github.com/Brijesh03032001/OptiVision#readme",
-  "engines": {
-    "node": ">=14"
-  }
+  "homepage": "https://github.com/Brijesh03032001/OptiVision#readme"
 }
